@@ -1,0 +1,43 @@
+$nsize: 150px
+$pcolor: #020505
+$percent: 50%
+
+body
+	margin: 0
+	color: red
+	background: $pcolor
+
+canvas
+	top: 0
+	z-index: -1
+	display: block
+	position: fixed
+	width: $percent * 2
+	height: $percent * 2
+
+.header
+	display: none
+	top: $percent
+	left: $percent
+	position: absolute
+	pointer-events: none
+	transform: translate(-$percent, -$percent)
+	strong
+		color: $pcolor
+	
+
+.tlevel, .blevel
+	display: none
+	height: $nsize
+	background: $pcolor
+	
+.footer
+	z-index: 10001
+	right: 1rem
+	bottom: 2rem
+	position: absolute
+	img
+		width: 2.5rem
+		transition: opacity 0.5s
+		&:hover
+			opacity: 0.5
